@@ -32,5 +32,5 @@ const targetEven = 10;
 const testOddLength = binarySearch(testArrOdd, targetOdd); // --> 2
 const testEvenLength = binarySearch(testArrEven, targetEven); // --> -1
 
-console.log(testOddLength);
-console.log(testEvenLength);
+console.log(testOddLength); // 2
+console.log(testEvenLength); // -1

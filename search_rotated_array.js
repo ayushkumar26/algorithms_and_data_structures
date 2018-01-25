@@ -10,28 +10,38 @@ function searchRotatedArrayRecurse(arr, target, low, high) {
 
   if (arr[mid] === target) {
     return mid;
+  } else if (arr[mid] < arr[high]) {
+    if (target > arr[mid] && target <= arr[high]) {
+      return searchRotatedArrayRecurse(arr, target, mid + 1, high);
+    } else {
+      return searchRotatedArrayRecurse(arr, target, low, mid - 1);
+    }
+  } else {
+    if (target >= arr[low] && target < arr[mid]) {
+      return searchRotatedArrayRecurse(arr, target, low, mid - 1);
+    } else {
+      return searchRotatedArrayRecurse(arr, target, mid + 1, high);
+    }
   }
 
-  // if high > mid (aka rotation is on right side of arr)
-    // if target > mid && target <= high
-      // use right side of array (mid + 1 to high)
-    // else use left side of array (low to mid - 1)
-
-  // if high < mid (aka rotation is on left side of arr)
-    // if target > mid || target <= high
-      // use right side of array (mid + 1 to high)
-    // else use left side of array (low to mid - 1)
-      
+  return -1;
 }
 
 function searchRotatedArray(arr, target) {
-
+  return searchRotatedArrayRecurse(arr, target, 0, arr.length - 1);
 }
 
 /* TEST CASES */
 
 const arr0 = [176, 188, 199, 200, 210, 222, 1, 10, 20, 47, 59, 63, 75, 88, 99, 107, 120, 133, 155, 162];
+const arr1 = [47, 59, 63, 75, 88, 99, 107, 120, 133, 155, 162, 176, 188, 199, 200, 210, 222, 1, 10, 20];
 
-const test0 = searchRotatedArray(arr0, 120);
+const test0 = searchRotatedArray(arr0, 120); // --> 16
+const test1 = searchRotatedArray(arr0, 260); // --> -1
+const test2 = searchRotatedArray(arr1, 63); // --> 2
+const test3 = searchRotatedArray(arr1, 1337); // --> -1
 
-console.log(test0);
+console.log(test0); // 16
+console.log(test1); // -1
+console.log(test2); // 2
+console.log(test3); // -1

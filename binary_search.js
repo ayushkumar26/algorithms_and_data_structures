@@ -1,5 +1,5 @@
-// binary search algorithm on an sorted array
-// return index of target if found, otherwise return -1
+// implement a binary search algorithm for a sorted array
+// return index of target in array if found, otherwise return -1
 
 function binarySearchRecurse(arr, target, low, high) {
   if (low > high) {

@@ -34,9 +34,9 @@ const testNum3 = 1000;
 
 // the following tests will include decimals, even for perfect squares, because we're looking only within the epsilon range
 const test0 = squareRootIterative(testNum0); // --> 3
-const test1 = squareRootIterative(testNum1); // --> 3
+const test1 = squareRootIterative(testNum1); // --> 4
 const test2 = squareRootIterative(testNum2); // --> 5
-const test3 = squareRootIterative(testNum3); // --> 3
+const test3 = squareRootIterative(testNum3); // --> ~31
 
 console.log(test0); // ~3
 console.log(test1); // ~4

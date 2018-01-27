@@ -9,9 +9,9 @@ function shortestPathInMaze(board, start, end) {
   const queue = [initial];
 
   while (queue.length > 0) {
-    var current = queue.shift();
-    var currentI = current.coord[0];
-    var currentJ = current.coord[1];
+    const current = queue.shift();
+    const currentI = current.coord[0];
+    const currentJ = current.coord[1];
 
     board[currentI][currentJ] = 2;
 
@@ -20,7 +20,7 @@ function shortestPathInMaze(board, start, end) {
     }
 
     if (currentI > 0 && board[currentI - 1][currentJ] === 1) {
-      const newMove = { coord: [currentI-1, currentJ], dist: current.dist + 1 };
+      const newMove = { coord: [currentI - 1, currentJ], dist: current.dist + 1 };
       queue.push(newMove);
     }
 
@@ -40,7 +40,7 @@ function shortestPathInMaze(board, start, end) {
     }
   }
 
-  return "no path found";
+  return "No path found";
 }
 
 /* TEST CASES */ 

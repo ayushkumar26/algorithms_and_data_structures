@@ -9,7 +9,7 @@ function shortestPathInMaze(board, start, end) {
   const queue = [initial];
 
   while (queue.length > 0) {
-    const current = queue.shift();
+    let current = queue.shift();
     const currentI = current.coord[0];
     const currentJ = current.coord[1];
 

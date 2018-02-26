@@ -1,21 +1,21 @@
 // Given 3 arrays, find the smallest common number between them
 
-function smallestCommon(arr0, arr1, arr2) {
+function smallestCommon(a, b, c) {
   let smallestCommon = -1;
-  let curr0 = 0;
-  let curr1 = 0;
-  let curr2 = 0;
+  let i = 0;
+  let j = 0;
+  let k = 0;
 
-  while (arr0[curr0 + 1] && arr1[curr1 + 1] && arr2[curr2 + 1]) {
-    if (arr0[curr0] === arr1[curr1] && arr0[curr0] === arr2[curr2]) {
-      return arr0[curr0];
+  while (a[i + 1] && b[j + 1] && c[k]) {
+    if (a[i] === b[j] && a[i] === c[k]) {
+      return a[i];
     }
-    if (arr0[curr0] < arr1[curr1] && arr0[curr0] < arr2[curr2]) {
-      curr0 += 1;
-    } else if (arr1[curr1] < arr0[curr0] && arr1[curr1] < arr2[curr2]) {
-      curr1 += 1;
+    if (a[i] < b[j] && a[i] < c[k]) {
+      i += 1;
+    } else if (b[j] < a[i] && b[j] < c[k]) {
+      j += 1;
     } else {
-      curr2 += 1;
+      k += 1;
     }
   }
 

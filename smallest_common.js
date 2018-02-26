@@ -10,9 +10,10 @@ function smallestCommon(a, b, c) {
     if (a[i] === b[j] && a[i] === c[k]) {
       return a[i];
     }
-    if (a[i] < b[j] && a[i] < c[k]) {
+
+    if (a[i] <= b[j] && a[i] <= c[k]) {
       i += 1;
-    } else if (b[j] < a[i] && b[j] < c[k]) {
+    } else if (b[j] <= a[i] && b[j] <= c[k]) {
       j += 1;
     } else {
       k += 1;

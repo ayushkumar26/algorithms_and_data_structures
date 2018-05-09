@@ -1,11 +1,14 @@
 // Implement the bubble sort algorithm on an array of integers
 
+// recursive solution
+
 function bubbleSort(arr) {
-  // start swap counter at 0
-  // iterate through the arr and check if e + 1 < e
+  // initialize a swapped holder variable to 'false'
+  // iterate through the arr and check if next element < current element
     // if so, swap both elements
-    // increment swap counter
-  // once at end of arr, if swaps > 0, sort arr again
+    // change swapped to 'true'
+  // once at end of arr, if swapped is 'true', call function again
+  // function will terminate when there are no further swaps, i.e., arr is sorted
 
   var swaps = 0; 
   
@@ -26,6 +29,8 @@ function bubbleSort(arr) {
 }
 
 // TESTS:
+
+// recursive solution: 
 
 const testArr0 = [0, 7, 2, 1, 6, 4, 5, 3];
 

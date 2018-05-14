@@ -7,17 +7,17 @@ function bubbleSortRecurse(arr) {
   // iterate through the arr and check if next element < current element
     // if so, swap both elements
     // change swapped to 'true'
-  // once at end of arr, if swapped is 'true', call function again
+  // once at end of arr, if swapped is 'true', call function again on shortened array
   // function will terminate when there are no further swaps, i.e., arr is sorted
   // return arr
-
+  
   var swapped = false; 
   
-  for (var i = 0; i < arr.length; i += 1) {
-    if (arr[i + 1] < arr[i]) {
+  for (var i = arr.length - 1; i >= 0; i -= 1) {
+    if (arr[i - 1] > arr[i]) {
       var temp = arr[i];
-      arr[i] = arr[i + 1];
-      arr[i + 1] = temp;
+      arr[i] = arr[i - 1];
+      arr[i - 1] = temp;
       swapped = true;
     }
   }

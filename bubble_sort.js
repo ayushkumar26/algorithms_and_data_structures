@@ -38,22 +38,27 @@ function bubbleSortIterate(arr) {
   // if at end of array and no swaps, return arr
 
   var swapped = true;
+  var j = arr.length - 1;
 
   while (swapped) {
     var swaps = 0;
-    for (var i = 0; i < arr.length; i += 1) {
-      if (arr[i + 1] < arr[i]) {
+    
+    for (i = 0; i < j; i += 1) {
+      if (arr[i] > arr[i + 1]) {
         var temp = arr[i];
         arr[i] = arr[i + 1];
         arr[i + 1] = temp;
         swaps += 1;
       }
     }
+    
+    j -= 1;
+    
     if (swaps === 0) {
       swapped = false;
-    }  
+    }
   }
-
+  
   return arr;
 }
 

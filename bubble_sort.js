@@ -30,12 +30,14 @@ function bubbleSortRecurse(arr) {
 }
 
 function bubbleSortIterate(arr) {
-  // keep a swap counter variable
+  // keep a swapped flag variable, initialize to true
   // iterate arr and check if next element < current element
     // if so, swap both elements
-    // change increment swapped counter
-  // if at end of array and there's been a swap, sort arr again
-  // if at end of array and no swaps, return arr
+    // increment swap counter
+  // if at end of arr and there's been at least 1 swap, loop arr again
+    // decrement loop length counter, as largest element will already be at end of arr
+  // if at end of array and no swaps, change flag to false
+  // return sorted arr
 
   var swapped = true;
   var j = arr.length - 1;

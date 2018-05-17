@@ -67,27 +67,3 @@ class BinarySearchTree {
     return current.data;
   }
 }
-
-BinarySearchTree.prototype.add = function(data) {
-  const node = this.root;
-  // check if root node exists, if not, set passed in node to root node
-  if (node === null) {
-    this.root = new Node(data);
-    return;
-  } else {
-    // if root node exists, we have to find where in the tree to place the new node
-    function searchTree(node) {
-      // search left side
-      if (data < node.data) {
-        if (!node.left) {
-          node.left = new Node(data);
-          return;
-        } else {
-          searchTree(node.left);
-        }
-      }
-    }
-
-  }
-
-}

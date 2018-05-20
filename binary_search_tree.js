@@ -55,6 +55,7 @@ class BinarySearchTree {
     while (current.left !== null) {
       current = current.left;
     }
+    
     return current.data;
   }
 
@@ -64,12 +65,14 @@ class BinarySearchTree {
     while (current.right !== null) {
       current = current.right;
     }
+
     return current.data;
   }
 
   find(data) {
     // this method returns the entire node if the data exists in the tree
     let current = this.root;
+
     while (current.data !== data) {
       if (data < current.data) {
         current = current.left;
@@ -80,6 +83,7 @@ class BinarySearchTree {
         return null;
       }
     }
+
     return current;
   }
 }

@@ -1,4 +1,4 @@
-// given an array of integers, return the indices of the pair that sum to target
+// given an unsorted array of integers, return the indices of the pair that sum to target
 // can not use the same index twice
 
 const twoSum = (nums, target) => {
@@ -16,3 +16,5 @@ const twoSum = (nums, target) => {
 
   return 'No satisfactory unique integer pair'
 };
+
+// TEST CASES:

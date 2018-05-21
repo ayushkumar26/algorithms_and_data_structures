@@ -8,7 +8,7 @@ const twoSumSorted = (nums, target) => {
   while (i < j) {
     let total = nums[i] + nums[j];
 
-    if (total === target && nums[i] !== nums[j]) {
+    if (total === target) {
       return [i + 1, j + 1];
     } else if (total > target) {
       j -= 1;
